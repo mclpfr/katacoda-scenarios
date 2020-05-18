@@ -11,6 +11,8 @@
         "steps": [
             {
                 "title": "Step 1",
+                "courseData": "setup.sh",
+                "code": "setup.sh",
                 "text": "step1.md"
             }
         ],
