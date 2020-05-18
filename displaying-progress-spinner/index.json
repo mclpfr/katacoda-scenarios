@@ -15,8 +15,8 @@
             }
         ],
         "assets": {
-            "host01": [
-                {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+            "client": [
+                {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
             ],
             "host01": [
                 {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
