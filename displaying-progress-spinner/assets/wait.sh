@@ -1,5 +1,14 @@
 #!/bin/bash
 
+deploy_moodle()
+{
+  docker-compose up -d 1>&2
+  docker exec -it moodle_moodle_1 mkdir -p /bitnami/moodle/moodledata/repository/docker
+  BACKUP_MODDLE_FILE=$(ls -ail | grep backup | awk '{print $10}')
+  docker cp $BACKUP_MODDLE_FILE moodle_moodle_1:/bitnami/moodle/moodledata/repository/docker
+  docker exec -it moodle_moodle_1 chown bitnami:daemon /bitnami/moodle/moodledata/repository/docker
+}
+
 show_progress()
 {
   echo -n "Starting"
@@ -40,4 +49,5 @@ show_progress()
   echo "Configured"
 }
 
+deploy_moodle
 show_progress
