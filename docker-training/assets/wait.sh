@@ -20,9 +20,9 @@ show_progress()
     fi
   done
   printf "    \b\b\b\b"
-  echo ""
+  #echo ""
   #echo "Started"
-  echo -n "Déploiement en cours"
+  echo -n "Déploiement de la plateforme Moodle en cours"
   while true; do 
     sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
     if [[ "$?" -ne 0 ]]; then     
