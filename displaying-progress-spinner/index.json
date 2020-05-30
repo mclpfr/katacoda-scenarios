@@ -22,7 +22,9 @@
     },
     "files": [],
     "environment": {
-        "uilayout": "terminal"
+        "uilayout": "terminal",
+        "showdashboard": true,
+        "dashboards": [{"name": "moodle", "port": 80}]
     },
     "backend": {
         "imageid": "ubuntu"
