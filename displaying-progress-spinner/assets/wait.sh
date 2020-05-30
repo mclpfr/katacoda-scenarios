@@ -22,7 +22,7 @@ show_progress()
   printf "    \b\b\b\b"
   echo ""
   echo "Started"
-  echo -n "Deploiement en cours "
+  echo -n "Déploiement en cours "
   while true; do 
     sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
     if [[ "$?" -ne 0 ]]; then     
@@ -37,7 +37,7 @@ show_progress()
   done
   printf "    \b\b\b\b"
   echo ""
-  echo "Configured"
+  echo "Déploiement terminé"
 }
 
 show_progress
