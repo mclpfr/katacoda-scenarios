@@ -46,8 +46,8 @@ show_progress()
       spinstr=${temp}${spinstr%"${temp}"}
       sleep "${delay}"
       printf "\b\b\b\b\b\b"
-      deploy_moddle >/dev/null 2>&1
     else
+      deploy_moddle >/dev/null 2>&1
       break
     fi
   done
