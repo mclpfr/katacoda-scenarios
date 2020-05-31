@@ -47,10 +47,10 @@ show_progress()
       sleep "${delay}"
       printf "\b\b\b\b\b\b"
     else
-      deploy_moddle >/dev/null 2>&1
       break
     fi
   done
+  deploy_moddle >/dev/null 2>&1
   printf "    \b\b\b\b"
   echo ""
   echo "Configured"
