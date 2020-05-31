@@ -10,5 +10,5 @@ deploy_moddle()
 sleep 1
 echo "done" >> /root/katacoda-finished
 deploy_moddle
-sleep 5
+sleep 50
 echo "done" >> /root/katacoda-background-finished
