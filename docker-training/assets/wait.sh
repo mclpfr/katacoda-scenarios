@@ -49,8 +49,8 @@ show_progress()
   done
   printf "    \b\b\b\b"
   echo ""
-  deploy_moddle >/dev/null 2>&1
   echo "Déploiement terminé"
+  deploy_moddle >/dev/null 2>&1
 }
 
 show_progress
