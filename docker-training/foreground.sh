@@ -1,1 +1,1 @@
-sleep 1; wait.sh > /dev/null
+sleep 1; wait.sh
