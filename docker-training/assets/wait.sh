@@ -58,4 +58,4 @@ show_progress()
 
 show_progress
 set_moddle
-restore_course
+restore_course >/dev/null 2>&1
