@@ -1,5 +1,12 @@
 #!/bin/bash
 
+deploy_moddle()
+{
+  git clone https://github.com/mclpfr/moodle.git
+  cd moodle 
+  docker-compose up -d 1>&2
+ }
+ 
 show_progress()
 {
   echo -n "Starting"
@@ -37,6 +44,7 @@ show_progress()
   done
   printf "    \b\b\b\b"
   echo ""
+  deploy_moddle
   echo "Configured"
 }
 
