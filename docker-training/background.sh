@@ -10,6 +10,6 @@ set_moddle()
 
 sleep 1
 echo "done" >> /root/katacoda-finished
-sleep 240
+sleep 10
 set_moddle
 echo "done" >> /root/katacoda-background-finished
