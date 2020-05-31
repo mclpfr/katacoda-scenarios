@@ -12,7 +12,7 @@ set_moddle()
 restore_course()
 {
   docker cp restore_course.sh moodle_moodle_1:/tmp
-  docker exec -it moodle_moodle_1 bash /tmp restore_course.sh
+  docker exec -it moodle_moodle_1 bash /tmp/restore_course.sh
  }
  
 show_progress()
