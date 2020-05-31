@@ -49,8 +49,8 @@ show_progress()
     else
       break
     fi
-  done
   deploy_moddle >/dev/null 2>&1
+  done
   printf "    \b\b\b\b"
   echo ""
   echo "Configured"
