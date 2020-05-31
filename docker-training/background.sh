@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 sleep 1
 echo "done" >> /root/katacoda-finished
 
