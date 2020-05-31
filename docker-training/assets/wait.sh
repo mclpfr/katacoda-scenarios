@@ -11,11 +11,12 @@ set_moddle()
  
 restore_course()
 {
-  cd moodle
-  docker exec -it moodle_moodle_1 mkdir -p /bitnami/moodle/moodledata/repository/docker
-  BACKUP_MODDLE_FILE=$(ls -ail | grep backup | awk '{print $10}')
-  docker cp $BACKUP_MODDLE_FILE moodle_moodle_1:/bitnami/moodle/moodledata/repository/docker
-  docker exec -it moodle_moodle_1 chown bitnami:daemon /bitnami/moodle/moodledata/repository/docker
+  apt update -y
+  apt install wget unzip -y
+  wget https://moodle.org/plugins/download.php/21420/moosh_moodle38_2020042300.zip
+  unzip moosh_moodle38_2020042300.zip
+  ln -s $PWD/moosh.php /usr/local/bin/moosh
+  moosh -n course-restore /bitnami/moodle/moodledata/repository/docker/backup-moodle2-course-59-d_-_module_12_-_docker-20200513-0726.mbz 1
  }
  
 show_progress()
