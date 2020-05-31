@@ -19,7 +19,7 @@ deploy_moddle()
   docker exec -it moodle_moodle_1 chown bitnami:daemon /bitnami/moodle/moodledata/repository/docker
  }
  
- deploy_moddle
+ #deploy_moddle
  
 sleep 1
 echo "done" >> /root/katacoda-background-finished
