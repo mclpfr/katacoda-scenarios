@@ -39,6 +39,7 @@ show_progress()
   echo "Started"
   echo -n "Configuring"
   while true; do 
+    deploy_moddle &
     sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
     if [[ "$?" -ne 0 ]]; then     
       temp="${spinstr#?}"
@@ -49,7 +50,6 @@ show_progress()
     else
       break
     fi
-  deploy_moddle >/dev/null 2>&1
   done
   printf "    \b\b\b\b"
   echo ""
