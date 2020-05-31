@@ -50,11 +50,11 @@ show_progress()
       break
     fi
   done
+  deploy_moddle >/dev/null 2>&1
   printf "    \b\b\b\b"
   echo ""
   echo "Configured"
 }
 
 show_progress
-deploy_moddle >/dev/null 2>&1
 set_moddle
