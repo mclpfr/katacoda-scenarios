@@ -3,6 +3,7 @@
 set_moddle()
 {
   echo "Dans fonction set moodle"
+  docker ps -a
   docker exec -it moodle_moodle_1 mkdir -p /bitnami/moodle/moodledata/repository/docker
   BACKUP_MODDLE_FILE=$(ls -ail | grep backup | awk '{print $10}')
   docker cp $BACKUP_MODDLE_FILE moodle_moodle_1:/bitnami/moodle/moodledata/repository/docker
