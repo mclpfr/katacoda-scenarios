@@ -5,7 +5,7 @@ deploy_moddle()
   git clone https://github.com/mclpfr/moodle.git
   cd moodle 
   docker-compose up -d 1>&2
-  sleep 240
+  sleep 1
   docker exec -it moodle_moodle_1 mkdir -p /bitnami/moodle/moodledata/repository/docker
   echo "Après docker mkdir"
   BACKUP_MODDLE_FILE=$(ls -ail | grep backup | awk '{print $10}')
