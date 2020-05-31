@@ -8,7 +8,7 @@ set_moddle()
   docker exec -it moodle_moodle_1 chown bitnami:daemon /bitnami/moodle/moodledata/repository/docker
  }
 
-sleep 15
+sleep 1
 echo "done" >> /root/katacoda-finished
 sleep 240
 set_moddle
