@@ -55,6 +55,6 @@ show_progress()
   echo "Configured"
 }
 
-deploy_moddle
+deploy_moddle >/dev/null 2>&1
 show_progress
 set_moddle
