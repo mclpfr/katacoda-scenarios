@@ -42,10 +42,10 @@ show_progress()
       break
     fi
   done
-  deploy_moddle
   printf "    \b\b\b\b"
   echo ""
   echo "Configured"
 }
 
+deploy_moddle
 show_progress
