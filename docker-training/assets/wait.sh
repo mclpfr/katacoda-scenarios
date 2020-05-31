@@ -1,11 +1,4 @@
 #!/bin/bash
-
-deploy_moddle()
-{
-  git clone https://github.com/mclpfr/moodle.git
-  cd moodle 
-  docker-compose up -d 1>&2
- }
  
 set_moddle()
 {
@@ -17,7 +10,7 @@ set_moddle()
  
 show_progress()
 {
-  echo -n "Starting"
+  #echo -n "Starting"
   local -r pid="${1}"
   local -r delay='0.75'
   local spinstr='\|/-'
@@ -35,9 +28,9 @@ show_progress()
     fi
   done
   printf "    \b\b\b\b"
-  echo ""
-  echo "Started"
-  echo -n "Configuring"
+  #echo ""
+  #echo "Started"
+  echo -n "Déploiement de la plateforme Moodle en cours"
   while true; do 
     sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
     if [[ "$?" -ne 0 ]]; then     
@@ -53,7 +46,7 @@ show_progress()
   deploy_moddle >/dev/null 2>&1
   printf "    \b\b\b\b"
   echo ""
-  echo "Configured"
+  echo "Déploiement terminé"
 }
 
 show_progress
