@@ -10,7 +10,7 @@ deploy_moddle()
   echo "Avant docker-compose"
   docker-compose up -d 1>&2
   echo "Apres docker-compose"
-  sleep 240
+  sleep 1
   echo "Avant docker mkdir"
   docker exec -it moodle_moodle_1 mkdir -p /bitnami/moodle/moodledata/repository/docker
   echo "Après docker mkdir"
