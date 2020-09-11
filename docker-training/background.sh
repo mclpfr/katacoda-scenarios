@@ -2,6 +2,7 @@
 set -x
 deploy_moddle()
 {
+  echoe "Dans deploy"
   git clone https://github.com/mclpfr/moodle.git
   cd moodle 
   docker-compose up -d 1>&2
