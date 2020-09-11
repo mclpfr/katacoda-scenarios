@@ -1,7 +1,6 @@
 #!/bin/bash
 deploy_moddle()
 {
-  echoe "Dans deploy"
   git clone https://github.com/mclpfr/moodle.git
   cd moodle 
   docker-compose up -d 1>&2
@@ -10,5 +9,5 @@ deploy_moddle()
 sleep 1
 echo "done" >> /root/katacoda-finished
 deploy_moddle
-#sleep 240
+sleep 240
 echo "done" >> /root/katacoda-background-finished
