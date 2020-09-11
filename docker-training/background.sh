@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 deploy_moddle()
 {
   git clone https://github.com/mclpfr/moodle.git
