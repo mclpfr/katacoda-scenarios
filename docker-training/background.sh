@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 deploy_moddle()
 {
   echoe "Dans deploy"
